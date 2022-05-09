@@ -3,6 +3,7 @@ import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Image;
+import java.awt.RenderingHints;
 import java.awt.event.KeyEvent;
 import java.io.IOException;
 import java.net.MalformedURLException;
@@ -43,6 +44,7 @@ public class Ventana extends JFrame implements Runnable{
 		puntIzq= new Texto(Integer.toString(PuntuacionJ1), Constantes.POS_X_TEXTO, Constantes.POS_Y_TEXTO);
 		puntDer= new Texto(Integer.toString(PuntuacionJ2), Constantes.ANCHO_PANTALLA - Constantes.POS_X_TEXTO - Constantes.TAM_TEXTO, Constantes.POS_Y_TEXTO);
 		
+		
 		jugadorUno = new Rectangulo(Constantes.ANCHO_PALA, (Constantes.ALTO_PANTALLA/6), Constantes.ANCHO_PALA, Constantes.ALTO_PALA, Color.white);
 		contJug = new ControladorJugador(jugadorUno, kl);
 		jugadorDos = new Rectangulo( (Constantes.ANCHO_PANTALLA - Constantes.ANCHO_PALA*2), (Constantes.ALTO_PANTALLA/6), Constantes.ANCHO_PALA, Constantes.ALTO_PALA, Color.white);
@@ -79,6 +81,7 @@ public class Ventana extends JFrame implements Runnable{
 	
 	public void dibujar(Graphics g) {
 		Graphics2D g2d = (Graphics2D) g;
+		g2d.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON); //no hace que las letras se vean suaves, pero si hace que la ia no haga un efecto raro al moverse
 		
 		g2d.setColor(Color.black);
 		g2d.fillRect(0, 0, Constantes.ANCHO_PANTALLA, Constantes.ALTO_PANTALLA);
@@ -88,6 +91,7 @@ public class Ventana extends JFrame implements Runnable{
 		jugadorUno.dibujar(g2d);
 		jugadorDos.dibujar(g2d);
 		bola.dibujar(g2d);
+		
 	}
 	
 	@Override
