@@ -1,4 +1,6 @@
 # JPong
+##Disclaimer: some of the text might be in Spanish.
+
 The Pong Java series by GamesWithGabe was used for reference. 
 Some of the code was written from scratch by me or adapted from other sources like Stack Overflow.
 
