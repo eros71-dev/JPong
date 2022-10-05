@@ -1,3 +1,5 @@
+![70a04256-93a0-4cbf-9b4c-086e1c6039f6](https://user-images.githubusercontent.com/16540103/194103925-357f05bd-daad-48fc-b534-dad5b207d349.png)
+
 # JPong
 ## Disclaimer: some of the text might be in Spanish.
 
